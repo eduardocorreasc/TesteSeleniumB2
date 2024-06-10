@@ -4,4 +4,4 @@ Para rodar a automação você precisa ter o Java instalado em seu computador co
 
 Para rodar a automação utilize alguma IDE para rodar projetos Java Maven. Eu recomendo o Eclipse.
 
-Por fim no arquivo TesteAutomacao.java execute um "Run AS" e depois selecione "Junit Test" para rodar os testes automatizados.
+Por fim no arquivo Main.java execute um "Run AS" e depois selecione "Junit Test" para rodar os testes automatizados.
