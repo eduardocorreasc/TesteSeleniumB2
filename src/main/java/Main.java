@@ -22,7 +22,6 @@ public class Main {
 		driver.findElement(By.xpath("//*[@id=\"login-form\"]/fieldset/input[2]")).click();
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("jogabonito1");
 		driver.findElement(By.xpath("//*[@id=\"login-form\"]/fieldset/input[3]")).click();
-			
 	}
 	
 	//Given que sou um usuário logado
@@ -57,7 +56,8 @@ public class Main {
 		assertEquals("Problema grave encontrado quando se faz cadastro", page.ValidaDescricao());
 		assertEquals("Login no sistema, faz um cadastro e valida", page.ValidaPassoReproduzir());
 		assertEquals("Problema encontrado no teste regressivo", page.ValidaInfoAdicional());
-		assertEquals("teste", page.ValidaComboMarcadores());	
+		assertEquals("teste", page.ValidaComboMarcadores());
+		driver.quit();
 	}
 	
 	//Given sou um usuário logado
@@ -88,6 +88,7 @@ public class Main {
 		//Retira o marcador e valida que foi retirado corretamente
 		page.RetiraMarcador();
 		assertEquals("Nenhum marcador aplicado.", page.ValidaTextoMarcadores());
+		driver.quit();
 	}
 	
 	//Given sou um usuário logado
@@ -118,6 +119,7 @@ public class Main {
 		page.AbreMonitoradosPorMim();
 		//Valida que foi a task que foi adicionada como monitorada
 		assertEquals(valorCampo, page.GetNum());
+		driver.quit();
 	}
 	
 	//Given sou um usuário logado
@@ -149,6 +151,7 @@ public class Main {
 		Thread.sleep(2000);
 		//Valida que o botão voltou a ser "Monitorar"
 		assertEquals("Monitorar", page.ValorBotaoMonitorar());
+		driver.quit();
 	}
 	
 		//Given sou um usuário logado
@@ -187,5 +190,6 @@ public class Main {
 			assertEquals("Defeito encontrado ao logar no sisema", page.ValidaDescricao());
 			assertEquals("Tentar logar no sistema", page.ValidaPassoReproduzir());
 			assertEquals("Problema encontrado nos testes manuais", page.ValidaInfoAdicional());	
+			driver.quit();
 		}		
 }
